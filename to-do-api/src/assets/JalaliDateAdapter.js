@@ -1,10 +1,12 @@
 // JalaaliDateAdapter.js
 import dayjs from 'dayjs';
 import jalaliday from 'jalaliday';
+import 'dayjs/locale/fa';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 
 dayjs.extend(jalaliday);
-dayjs.calendar('jalali'); // Activate Jalali calendar
+dayjs.calendar('jalali');
+dayjs.locale('fa');
 
 export class AdapterJalaali extends AdapterDayjs {
     constructor() {
